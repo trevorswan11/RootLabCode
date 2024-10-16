@@ -1,0 +1,9 @@
+# package_name==version_number  # Optional comment
+pytest==7.2.0       # Testing framework for writing and running tests
+pandas==2.2.2       # 
+numpy==1.26.4       # 
+matplotlib==3.9.2   # 
+scikit-learn==1.5.2 # 
+tensorflow==2.17.0  # 
+# fpdf==1.7.2         # 
+# reportlab==4.2.5    # 
