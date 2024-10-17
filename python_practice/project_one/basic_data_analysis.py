@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import os
 
 def create_data_list(data_names: list) -> list:
     csvs = []
@@ -11,7 +10,7 @@ def create_data_list(data_names: list) -> list:
 def clean_2D_data(path: str) -> pd.DataFrame:
     df = rotate_column_data(path)                                       # account for column only data (e.g 1, 2, 3, 4, 5, ...)
     return (df.dropna()                       
-            .apply(pd.to_numeric, errors = 'coerce')                      # force convert to numeric, replace errors with 'NaN'
+            .apply(pd.to_numeric, errors = 'coerce')                    # force convert to numeric, replace errors with 'NaN'
             .dropna())                                                  # remove any new NaN values
 
 def rotate_column_data(path: str, start: int = None, stop: int = None) -> pd.DataFrame:
@@ -68,7 +67,7 @@ def save_data(data: pd.DataFrame, file_name: str, folder: str = 'sample_stats', 
                 f.write(data.to_csv(index = include_indices, header = include_headers))
             case 'html':
                 f.write(data.to_html(index = include_indices, header = include_headers))
-            case 'tex':                                                 # requires Jinja2
+            case 'tex':                                                 #! really lovely latex formatting, will be useful for papers
                 f.write(data.to_latex(index = include_indices, header = include_headers))
             case _:                                                     # this acts as a default case, and also catches raised exceptions
                 f.write(data.to_string(index = include_indices, header = include_headers)) 
