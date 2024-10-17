@@ -141,6 +141,16 @@ Objective: Apply machine learning to predict material properties.
 
 *Folder: project_eight*
 
+### Linear Algebra Library
+---
+
+**Objective**: Become familiar with linear algebra operations and python OOP
+
+**Description**: This basic linear algebra library provides essential operations for vectors, matrices, and systems of equations, including addition, multiplication, transposition, eigenvalue computation, and solving linear systems.
+
+**Note**: This is fully implemented by me, though the functionality is outlined in the folder's README.md. This is *not* a 'project' and is being actively worked on without respect to ordering of the real projects.
+
+*Folder: linear_algebra*
 
 ## Projects are to be completed in order according to:
 - **Project 1 (Basic Data Analysis on Experimental Data)**: This introduces you to Python basics, especially Pandas and NumPy, which are critical for data manipulation in future projects. You'll get used to Python syntax and working with data files.
