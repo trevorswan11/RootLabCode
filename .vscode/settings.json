@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "Convolutional",
+        "dataframe",
         "dropna",
         "figsize",
         "Fpdf",
@@ -10,6 +11,7 @@
         "lineplot",
         "Matplotlib",
         "plotly",
+        "polts",
         "Scikit",
         "statsmodels",
         "xlabel",
