@@ -1,6 +1,10 @@
 {
     "cSpell.words": [
         "annot",
+        "argsv",
+        "bordercolor",
+        "borderpad",
+        "borderwidth",
         "cmap",
         "Convolutional",
         "coolwarm",
@@ -22,9 +26,13 @@
         "polts",
         "quatities",
         "Scikit",
+        "showarrow",
         "statsmodels",
+        "xaxis",
         "xlabel",
         "xscale",
-        "ylabel"
+        "yaxis",
+        "ylabel",
+        "yref"
     ]
 }
