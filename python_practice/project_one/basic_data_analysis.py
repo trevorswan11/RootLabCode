@@ -58,11 +58,11 @@ def rotate_column_data(path: str, start: int = None, stop: int = None) -> pd.Dat
         return result
     return data                                                         # this is called for every file, but not every file is modified
 
-def data_statistics(data_names, csv_files: list) -> pd.DataFrame:
+def data_statistics(data_names: list, csv_files: list) -> pd.DataFrame:
     """Generates the mean, median, mode, std dev, min, and max of DataFrames
 
     Args:
-        data_names (_type_): The names of each data set to use as DataFrame indices
+        data_names (list): The names of each data set to use as DataFrame indices
         csv_files (list): The files to perform the analysis on
 
     Returns:
@@ -87,15 +87,15 @@ def data_statistics(data_names, csv_files: list) -> pd.DataFrame:
                     stats.at[data_names[i], name] = func(f[col])        # set stats for the data set at name of the statistic to evaluated function
         except Exception as e:
             print(e)                                                    # really basic and horrible error handling            
-    return stats     
+    return stats.dropna()     
 
-def save_data(data: pd.DataFrame, file_name: str, folder: str = 'sample_stats', file_type: str = 'csv', include_indices: bool = True, include_headers: bool = True) -> str:
+def save_data(data: pd.DataFrame, file_name: str, folder: str = 'sample_files', file_type: str = 'csv', include_indices: bool = True, include_headers: bool = True) -> str:
     """Saves the data in a DataFrame to a desired file path with desired name and file type
 
     Args:
         data (pd.DataFrame): The DataFrame to be saved
         file_name (str): The desired name of the file to save
-        folder (str, optional): The folder location to save the data to. Defaults to 'sample_stats'.
+        folder (str, optional): The folder location to save the data to. Defaults to 'sample_files'.
         file_type (str, optional): The file extension to use with the file without the leading period. Defaults to 'csv'.
         include_indices (bool, optional): Determines if the output should include df index names. Defaults to True.
         include_headers (bool, optional): Determines if the output should include df header names. Defaults to True.
